@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VAMOS POR UNOS TACOS </title>
+    <style>
+        .body {
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        .body title {
+            color: black;
+        }
+        .body button{
+            background-color: white;
+            padding: 4px 25px;
+            color: black;
+        }
+    
+    </style>
+</head>
+
+<body class="body">
+    <H1 class="body__title"> VAMOS POR UNOS TACOS </H1>
+
+    <img src="img\perrito.jpg"alt="Foto mia"
+    class="body_img"
+    width="25%" 
+    height="30%"/>
+    
+    <br>
+
+    <button id="yes"> <h2> si </h2></button>
+    <button id="no"> <h2> no </h2></button>
+
+    <script>
+
+        const buttonSi = document.getElementById('yes');
+        const buttonNo = document.getElementById('no');
+
+        const tacos = () => { 
+            alert('¡tacos gratis!');
+            alert('¡siuuu!');
+            location.href = "https://www.youtube.com/watch?v=pi6GEdfvRo8&ab_channel=TheKhez";
+
+        };
+        const no_tacos = () => {
+            buttonNo.style.position = 'absolute';
+            buttonNo.style.top = (Math.random() * window.innerHeight) + 'px';
+            buttonNo.style.left = (Math.random() * window.innerHeight) + 'px';
+        };
+
+        buttonSi.addEventListener('click', tacos);
+        buttonNo.addEventListener('mouseover', no_tacos);
+
+    </script>
+</body>
+</html>
